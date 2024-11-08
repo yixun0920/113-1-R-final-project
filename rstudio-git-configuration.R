@@ -25,7 +25,7 @@ pat <- rstudioapi::showPrompt("Github setup","What is your personal access token
 credentials::set_github_pat(pat)
 
 ## or store it manually in '.Renviron':
-usethis::edit_r_environ()
+# usethis::edit_r_environ()
 ## store your personal access token in the file that opens in your editor with:
 ## GITHUB_PAT=xxxyyyzzz
 ## and make sure '.Renviron' ends with a newline
