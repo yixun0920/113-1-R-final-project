@@ -1,7 +1,13 @@
 ### Configure git with Rstudio ############################################
 
+username <- rstudioapi::showPrompt("Github setup", "What is your Github username?")
+email <- rstudioapi::showPrompt("Github setup", "What is your GitHub email? ")
+
+username <- username |> stringr::str_remove_all(" ") 
+email <- email |> stringr::str_remove_all(" ")
+
 ## set your user name and email:
-usethis::use_git_config(user.name = "githubUserName", user.email = "GithubRegistrationEmail")
+usethis::use_git_config(user.name = username, user.email = email)
 
 ## create a personal access token for authentication:
 usethis::create_github_token() 
@@ -13,8 +19,10 @@ usethis::create_github_token()
 ## extend the cache timeout to match the PAT validity period:
 usethis::use_git_config(credential.helper="cache --timeout=2600000")
 
+pat <- rstudioapi::showPrompt("Github setup","What is your personal access token? ")
+
 ## set personal access token:
-credentials::set_github_pat("personal access token created earlier in the popup")
+credentials::set_github_pat(pat)
 
 ## or store it manually in '.Renviron':
 usethis::edit_r_environ()
