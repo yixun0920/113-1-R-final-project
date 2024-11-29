@@ -1,5 +1,11 @@
 # Setup 
 
+<style>
+img {
+    border: 1px solid #555
+}
+</style>
+
   1. Fork this repository: click <img src="img/2024-11-29-13-46-06.png" width="80px"/> on the top right corner of this page. On the next page, click <img src="img/2024-11-29-13-47-44.png" width="80px"/>
   2. Clone your forked repository url: click <img src="img/2024-11-29-13-50-09.png" width="80px">, then copy the HTTPS url.
    <img src="img/2024-11-29-13-49-16.png" width="480px">
